@@ -1,0 +1,172 @@
+/* Body - full page background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, rgb(2, 6, 23), rgb(15, 23, 42), rgb(2, 6, 23)) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+  max-width: 56rem;
+}
+
+/* Top inputs container */
+.top-inputs {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 48rem;
+  flex-wrap: wrap;
+}
+
+/* Input fields */
+.top-inputs input {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem 1rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgb(30, 41, 59);
+  border-radius: 0.5rem;
+  color: rgb(226, 232, 240);
+  font-family: monospace;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.top-inputs input::placeholder {
+  color: rgb(71, 85, 105);
+}
+
+.top-inputs input:focus {
+  border-color: rgb(6, 182, 212);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+/* Select dropdown */
+.top-inputs select {
+  min-width: 150px;
+  padding: 0.75rem 1rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgb(30, 41, 59);
+  border-radius: 0.5rem;
+  color: rgb(226, 232, 240);
+  font-family: monospace;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.top-inputs select:focus {
+  border-color: rgb(6, 182, 212);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.top-inputs select option {
+  background-color: rgb(15, 23, 42);
+  color: rgb(226, 232, 240);
+  padding: 0.5rem;
+}
+
+/* Button */
+.top-inputs button {
+  padding: 0.75rem 1.5rem;
+  background-image: linear-gradient(to right, rgb(8, 145, 178), rgb(37, 99, 235));
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.top-inputs button:hover {
+  background-image: linear-gradient(to right, rgb(6, 182, 212), rgb(59, 130, 246));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.top-inputs button:active {
+  transform: translateY(0);
+}
+
+/* Summary box */
+.summary-box {
+  position: relative;
+  width: 100%;
+  max-width: 48rem;
+  min-height: 300px;
+  padding: 2rem;
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(30, 41, 59);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 60px rgba(6, 182, 212, 0.1);
+}
+
+.summary-box::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(to right, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 0.5rem;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+/* Summary text */
+.summary-box p {
+  color: rgb(203, 213, 225);
+  line-height: 1.7;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.summary-box p:empty::before {
+  content: 'No data to display';
+  color: rgb(71, 85, 105);
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .top-inputs {
+    flex-direction: column;
+  }
+  
+  .top-inputs input {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .summary-box {
+    padding: 1.5rem;
+  }
+}
