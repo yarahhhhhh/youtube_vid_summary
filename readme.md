@@ -6,7 +6,7 @@ The goal is to generate structured note-style summaries of YouTube videos. Acade
 
 ---
 
-![Summary App](images/summary_app.png)
+![Summary App](images/summary_example.png)
 
 # Backend (`app/main.py`)
 
