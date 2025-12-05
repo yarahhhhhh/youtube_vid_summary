@@ -2,7 +2,7 @@
 This is my first attempt at building a complete end-to-end application using a FastAPI backend, an OpenRouter LLM integration, and a React frontend. The backend and frontend run as separate modules.
  
 ## Purpose
-The goal is to generate structured note-style summaries of YouTube videos. Academic or concept-heavy videos often contain dense explanations that are hard to follow in real time (at least for me). This app provides a baseline set of notes and a quick way to evaluate whether a video is worth watching.
+The goal is to generate structured note-style summaries of YouTube videos. Academic or concept-heavy videos often contain dense explanations that are hard to follow in real time (at least for me, and I sometimes would paste the transcript into ChatGPT, which is what this app enables me to bypass by extracting it automatically). This app provides a baseline set of notes and a quick way to evaluate whether a video is worth watching.
 
 ---
 
