@@ -1,3 +1,6 @@
+Try it here: https://ytsummaryfront.osc-fr1.scalingo.io
+
+
 # Video Summarizer Overview
 This is my first attempt at building a complete end-to-end application using a FastAPI backend, an OpenRouter LLM integration, and a React frontend. The backend and frontend run as separate modules.
 I mainly coded this because I wanted to attempt web development, so I could ease myself into making UIs.
